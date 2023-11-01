@@ -1,14 +1,53 @@
 body{
-    background-color: rgb(95, 122, 145);
+    background-image: linear-gradient(to right,pink,violet);
+}
+div
+{
+    padding: 10px;
 }
 
-h1{
-    margin-top: 200px;
-    margin-left: 450px;
-}
 
-button{
-    margin-top: 200px;
-    margin-left: 650px;
+.img1
+{
+    position: absolute;
+    top:0;
+    left:0;
+}
+.img2
+{
+    position: absolute;
+    top: 0;
+    right: 0%;
+}
+.img3
+{
+    position: absolute;
+    bottom: 0%;
+    left: 0;
+}
+.img4
+{
+    bottom:0%;
+    right: 0%;
+    position: absolute;
+}
+h1
+{
+    margin-right: 0px;
+    margin-top: 500px;
+    margin-left: 350px;
+    font-family: "Merriweather";
+}
+img
+{
+    transform:rotate(30deg);
+    height: 250px;
+    width: 300px;
+}
+.btn
+{
+    margin-top: 400px;
+    margin-left: 600px;
+    
 
 }
