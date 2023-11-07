@@ -1,37 +1,13 @@
-/**
-* Template Name: PhotoFolio
-* Updated: Sep 18 2023 with Bootstrap v5.3.2
-* Template URL: https://bootstrapmade.com/photofolio-bootstrap-photography-website-template/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
-
-/*--------------------------------------------------------------
-# Set main reusable colors and fonts using CSS variables
-# Learn more about CSS variables at https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties
---------------------------------------------------------------*/
-/* Fonts */
-:root {
-  --font-default: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --font-primary: "Inter", sans-serif;
-  --font-secondary: "Cardo", sans-serif;
-}
-
-/* Colors */
 :root {
   --color-default: #fafafa;
   --color-primary: #27a776;
   --color-secondary: #161718;
 }
 
-/* Smooth scroll behavior */
 :root {
   scroll-behavior: smooth;
 }
 
-/*--------------------------------------------------------------
-# General
---------------------------------------------------------------*/
 body {
   font-family: var(--font-default);
   color: var(--color-default);
@@ -56,10 +32,32 @@ h5,
 h6 {
   font-family: var(--font-primary);
 }
+.imagegal{
+  color: black;
+  text-align: center;
+  margin-top: 20px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: larger;
+}
 
-/*--------------------------------------------------------------
-# Sections & Section Header
---------------------------------------------------------------*/
+.box {
+  --size: 50px;
+  --p: 25px;
+  --R: 55.9px /*sqrt(var(--size)*var(--size) + var(--p)*var(--p))*/;
+  
+  height: 200px;
+
+  -webkit-mask:
+    radial-gradient(var(--R) at 50% calc(100% - (var(--size) + var(--p))),blue 99%,#0000 101%) calc(50% - 2*var(--size)) 0/calc(4*var(--size)) 100%,
+    radial-gradient(var(--R) at 50% calc(100% + var(--p)),#0000 99%,red 101%) 50% calc(100% - var(--size))/calc(4*var(--size)) 100% repeat-x;
+  background:linear-gradient(90deg,pink,violet);  
+  border: none;
+}
+
+.btn{
+  margin-left: 1100px;
+}
+
 .section-header {
   padding-bottom: 40px;
 }
@@ -469,220 +467,6 @@ h6 {
   }
 }
 
-/*--------------------------------------------------------------
-# Mobile Navigation
---------------------------------------------------------------*/
-@media (max-width: 1279px) {
-  .navbar {
-    position: fixed;
-    top: 0;
-    right: -100%;
-    width: 100%;
-    max-width: 400px;
-    bottom: 0;
-    transition: 0.3s;
-    z-index: 9997;
-  }
-
-  .navbar ul {
-    position: absolute;
-    inset: 0;
-    padding: 50px 0 10px 0;
-    margin: 0;
-    background: rgba(0, 0, 0, 0.9);
-    overflow-y: auto;
-    transition: 0.3s;
-    z-index: 9998;
-  }
-
-  .navbar a,
-  .navbar a:focus {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 20px;
-    font-family: var(--font-primary);
-    font-size: 13px;
-    text-transform: uppercase;
-    font-weight: 400;
-    color: rgba(255, 255, 255, 0.5);
-    letter-spacing: 1px;
-    white-space: nowrap;
-    transition: 0.3s;
-  }
-
-  .navbar a i,
-  .navbar a:focus i {
-    font-size: 12px;
-    line-height: 0;
-    margin-left: 5px;
-  }
-
-  .navbar a:hover,
-  .navbar .active,
-  .navbar .active:focus,
-  .navbar li:hover>a {
-    color: #fff;
-  }
-
-  .navbar .dropdown ul,
-  .navbar .dropdown .dropdown ul {
-    position: static;
-    display: none;
-    padding: 10px 0;
-    margin: 10px 20px;
-    transition: all 0.5s ease-in-out;
-    border: 1px solid black;
-  }
-
-  .navbar .dropdown>.dropdown-active,
-  .navbar .dropdown .dropdown>.dropdown-active {
-    display: block;
-  }
-
-  .mobile-nav-show {
-    color: #fff;
-    font-size: 28px;
-    cursor: pointer;
-    line-height: 0;
-    transition: 0.5s;
-    z-index: 9999;
-    margin: 0 10px 0 10px;
-  }
-
-  .mobile-nav-hide {
-    color: #fff;
-    font-size: 32px;
-    cursor: pointer;
-    line-height: 0;
-    transition: 0.5s;
-    position: fixed;
-    right: 20px;
-    top: 20px;
-    z-index: 9999;
-  }
-
-  .mobile-nav-active {
-    overflow: hidden;
-  }
-
-  .mobile-nav-active .navbar {
-    right: 0;
-  }
-
-  .mobile-nav-active .navbar:before {
-    content: "";
-    position: fixed;
-    inset: 0;
-    background: rgba(22, 23, 24, 0.8);
-    z-index: 9996;
-  }
-}
-
-/*--------------------------------------------------------------
-# About Section
---------------------------------------------------------------*/
-.about .content h2 {
-  font-weight: 700;
-  font-size: 24px;
-  color: var(--color-primary);
-}
-
-.about .content ul {
-  list-style: none;
-  padding: 0;
-}
-
-.about .content ul li {
-  margin-bottom: 20px;
-  display: flex;
-  align-items: center;
-}
-
-.about .content ul strong {
-  margin-right: 10px;
-}
-
-.about .content ul i {
-  font-size: 16px;
-  margin-right: 5px;
-  color: var(--color-primary);
-  line-height: 0;
-}
-
-/*--------------------------------------------------------------
-# Testimonials Section
---------------------------------------------------------------*/
-.testimonials {
-  margin-top: 80px;
-}
-
-.testimonials .testimonial-item {
-  box-sizing: content-box;
-  padding: 30px;
-  margin: 40px 30px;
-  background: var(--color-secondary);
-  min-height: 320px;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  transition: 0.3s;
-}
-
-.testimonials .testimonial-item .stars {
-  margin-bottom: 15px;
-}
-
-.testimonials .testimonial-item .stars i {
-  color: #ffc107;
-  margin: 0 1px;
-}
-
-.testimonials .testimonial-item .testimonial-img {
-  width: 90px;
-  border-radius: 50%;
-  border: 5px solid #474a4d;
-  margin: 0 auto;
-}
-
-.testimonials .testimonial-item h3 {
-  font-size: 18px;
-  font-weight: bold;
-  margin: 10px 0 5px 0;
-  color: #fff;
-}
-
-.testimonials .testimonial-item h4 {
-  font-size: 14px;
-  color: rgba(255, 255, 255, 0.5);
-  margin: 0;
-}
-
-.testimonials .testimonial-item p {
-  font-style: italic;
-  margin: 0 auto 15px auto;
-}
-
-.testimonials .swiper-pagination {
-  margin-top: 20px;
-  position: relative;
-}
-
-.testimonials .swiper-pagination .swiper-pagination-bullet {
-  width: 12px;
-  height: 12px;
-  background-color: rgba(255, 255, 255, 0.2);
-  opacity: 1;
-}
-
-.testimonials .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: rgba(255, 255, 255, 0.5);
-}
-
-.testimonials .swiper-slide {
-  opacity: 0.3;
-}
-
 @media (max-width: 1199px) {
   .testimonials .swiper-slide-active {
     opacity: 1;
@@ -704,9 +488,6 @@ h6 {
   }
 }
 
-/*--------------------------------------------------------------
-# Pricing Section
---------------------------------------------------------------*/
 .gallery {
   margin-top: 40px;
 }
@@ -774,7 +555,7 @@ h6 {
 /*--------------------------------------------------------------
 # Gallery Single Section
 --------------------------------------------------------------*/
-.gallery-single .portfolio-details-slider img {
+/* .gallery-single .portfolio-details-slider img {
   width: 100%;
 }
 
@@ -939,11 +720,8 @@ h6 {
   font-style: italic;
   margin: 0 0 15px 0 0 0;
   padding: 0;
-}
+} */
 
-/*--------------------------------------------------------------
-# Services Section
---------------------------------------------------------------*/
 .services .service-item {
   padding: 50px 30px;
   transition: all ease-in-out 0.4s;
@@ -1011,255 +789,106 @@ h6 {
   color: var(--color-primary);
 }
 
-/*--------------------------------------------------------------
-# Pricing Section
---------------------------------------------------------------*/
-.pricing {
-  margin-top: 80px;
+
+.button-82-pushable {
+  position: relative;
+  border: none;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  outline-offset: 4px;
+  transition: filter 250ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
 }
 
-.pricing .pricing-item {
-  border-bottom: 1px dashed #474a4d;
+.button-82-shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  padding: 0 0 15px 0;
+  border-radius: 12px;
+  background: hsl(0deg 0% 0% / 0.25);
+  will-change: transform;
+  transform: translateY(2px);
+  transition:
+    transform
+    600ms
+    cubic-bezier(.3, .7, .4, 1);
 }
 
-.pricing .pricing-item h3 {
-  margin: 0;
-  font-size: 18px;
-  font-weight: 500;
-  color: rgba(255, 255, 255, 0.6);
-}
-
-.pricing .pricing-item h4 {
-  margin: 0;
-  font-size: 16px;
-}
-
-/*--------------------------------------------------------------
-# Contact Section
---------------------------------------------------------------*/
-.contact .info-item+.info-item {
-  margin-top: 40px;
-}
-
-.contact .info-item i {
-  font-size: 20px;
-  color: var(--color-primary);
-  float: left;
-  width: 44px;
-  height: 44px;
-  background: #222425;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50px;
-  transition: all 0.3s ease-in-out;
-  margin-right: 15px;
-}
-
-.contact .info-item h4 {
-  padding: 0;
-  font-size: 20px;
-  font-weight: 600;
-  margin-bottom: 5px;
-  color: rgba(255, 255, 255, 0.5);
-}
-
-.contact .info-item p {
-  padding: 0;
-  margin-bottom: 0;
-  font-size: 14px;
-  color: #fff;
-}
-
-.contact .info-item:hover i {
-  background: var(--color-primary);
-  color: #fff;
-}
-
-.contact .php-email-form {
-  width: 100%;
-}
-
-.contact .php-email-form .form-group {
-  padding-bottom: 8px;
-}
-
-.contact .php-email-form .error-message {
-  display: none;
-  color: #fff;
-  background: #df1529;
-  text-align: left;
-  padding: 15px;
-  font-weight: 600;
-}
-
-.contact .php-email-form .error-message br+br {
-  margin-top: 25px;
-}
-
-.contact .php-email-form .sent-message {
-  display: none;
-  color: #fff;
-  background: var(--color-primary);
-  text-align: center;
-  padding: 15px;
-  font-weight: 600;
-}
-
-.contact .php-email-form .loading {
-  display: none;
-  background: var(--color-secondary);
-  text-align: center;
-  padding: 15px;
-  color: rgba(255, 255, 255, 0.6);
-}
-
-.contact .php-email-form .loading:before {
-  content: "";
-  display: inline-block;
-  border-radius: 50%;
-  width: 24px;
-  height: 24px;
-  margin: 0 10px -6px 0;
-  border: 3px solid var(--color-primary);
-  border-top-color: var(--color-secondary);
-  animation: animate-loading 1s linear infinite;
-}
-
-.contact .php-email-form input,
-.contact .php-email-form textarea {
-  border-radius: 4px;
-  box-shadow: none;
-  font-size: 14px;
-  background-color: var(--color-secondary);
-  border: 1px solid #2e3133;
-  color: #fff;
-}
-
-.contact .php-email-form input {
-  height: 44px;
-}
-
-.contact .php-email-form textarea {
-  padding: 10px 12px;
-}
-
-.contact .php-email-form button[type=submit] {
-  background: var(--color-primary);
-  border: 0;
-  padding: 10px 35px;
-  color: #fff;
-  transition: 0.4s;
-  border-radius: 4px;
-}
-
-.contact .php-email-form button[type=submit]:hover {
-  background: rgba(39, 167, 118, 0.8);
-}
-
-@keyframes animate-loading {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-/*--------------------------------------------------------------
-# Hero Section
---------------------------------------------------------------*/
-.hero {
-  width: 100%;
-  min-height: 30vh;
-  background: #000;
-  background-size: cover;
-  position: relative;
-  padding: 140px 0 60px 0;
-}
-
-.hero h2 {
-  margin: 0 0 10px 0;
-  font-size: 38px;
-  font-weight: 700;
-  color: #fff;
-  font-family: var(--font-secondary);
-}
-
-.hero h2 span {
-  position: relative;
-  z-index: 1;
-  padding: 0 5px;
-  display: inline-block;
-}
-
-.hero h2 span:before {
-  content: "";
+.button-82-edge {
   position: absolute;
-  height: 50%;
-  bottom: 0;
+  top: 0;
   left: 0;
-  right: 0;
-  background: var(--color-primary);
-  z-index: -1;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  background: linear-gradient(
+    to left,
+    hsl(340deg 100% 16%) 0%,
+    hsl(340deg 100% 32%) 8%,
+    hsl(340deg 100% 32%) 92%,
+    hsl(340deg 100% 16%) 100%
+  );
 }
 
-.hero p {
-  color: rgba(255, 255, 255, 0.6);
-  margin-bottom: 30px;
-  font-size: 18px;
+.button-82-front {
+  display: block;
+  position: relative;
+  padding: 12px 27px;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  color: white;
+  background: hsl(345deg 100% 47%);
+  will-change: transform;
+  transform: translateY(-4px);
+  transition:
+    transform
+    600ms
+    cubic-bezier(.3, .7, .4, 1);
 }
 
-.hero .btn-get-started {
-  font-family: var(--font-primary);
-  font-weight: 400;
-  font-size: 14px;
-  display: inline-block;
-  padding: 12px 40px;
-  border-radius: 4px;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  transition: 0.3s;
-  color: #fff;
-  background: var(--color-primary);
-}
-
-.hero .btn-get-started:hover {
-  background: #2cbc85;
-}
-
-@media (max-width: 768px) {
-  .hero h2 {
-    font-size: 32px;
+@media (min-width: 768px) {
+  .button-82-front {
+    font-size: 1.25rem;
+    padding: 12px 42px;
   }
 }
 
-/*--------------------------------------------------------------
-# Footer
---------------------------------------------------------------*/
-.footer {
-  margin-top: 30px;
-  padding: 30px 0;
-  font-size: 14px;
-  border-top: 1px solid rgba(255, 255, 255, 0.15);
+.button-82-pushable:hover {
+  filter: brightness(110%);
+  -webkit-filter: brightness(110%);
 }
 
-.footer .copyright {
-  text-align: center;
-  color: rgba(255, 255, 255, 0.8);
+.button-82-pushable:hover .button-82-front {
+  transform: translateY(-6px);
+  transition:
+    transform
+    250ms
+    cubic-bezier(.3, .7, .4, 1.5);
 }
 
-.footer .credits {
-  padding-top: 6px;
-  text-align: center;
-  font-size: 13px;
-  color: rgba(255, 255, 255, 0.8);
+.button-82-pushable:active .button-82-front {
+  transform: translateY(-2px);
+  transition: transform 34ms;
 }
 
-.footer .credits a {
-  color: var(--color-primary);
+.button-82-pushable:hover .button-82-shadow {
+  transform: translateY(4px);
+  transition:
+    transform
+    250ms
+    cubic-bezier(.3, .7, .4, 1.5);
+}
+
+.button-82-pushable:active .button-82-shadow {
+  transform: translateY(1px);
+  transition: transform 34ms;
+}
+
+.button-82-pushable:focus:not(:focus-visible) {
+  outline: none;
 }
