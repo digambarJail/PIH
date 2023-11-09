@@ -1,104 +1,116 @@
-body{
-    background-image: linear-gradient(to right,pink,violet);
-}
-div
-{
-    padding: 10px;
-}
-.heading{
-    margin-top: 200px;
-}
-
-
-.img1
-{
+.parent {
+    position: relative;
+    width: 100%;
+  }
+  .one, .two {
     position: absolute;
-    top:0;
-    left:0;
-}
-.img2
-{
-    position: absolute;
-    top: 0;
-    right: 0%;
-}
-.img3
-{
-    position: absolute;
-    bottom: 0%;
+    height: 600px;
+    width: 65%;
+  }
+  .one {
     left: 0;
-}
-.img4
-{
-    bottom:0%;
-    right: 0%;
-    position: absolute;
-}
-h1
-{
-    margin-right: 0px;
-    margin-top: 500px;
-    margin-left: 350px;
-    font-family: "Merriweather";
-}
-img
-{
-    transform:rotate(30deg);
-    height: 250px;
-    width: 300px;
-}
-.btn
-{
-    margin-top: 200px;
-    margin-left: 600px;
+    top: 0;
+    background-color: rgb(197, 231, 242); 
+    -webkit-clip-path: polygon(0 0, 100% 0%, 50% 100%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0%, 50% 100%, 0% 100%); 
     
+  }
+  .two {
+    right: 0;
+    top: 0;
+    
+    background-color: pink;
+    -webkit-clip-path: polygon(50% 0, 100% 0%, 100% 100%, 0% 100%);
+    clip-path: polygon(50% 0, 100% 0%, 100% 100%, 0% 100%); 
+  }
+  .text1
+  {
+    margin-top: 50px;
+    margin-left:50px;
+    font-size:60px;
+    -webkit-text-stroke: 1px #0e0d0d;
+    color: transparent;
+    background-image: linear-gradient(#0e0d0d,#0e0d0d);
+    background-repeat: no-repeat;
+    -webkit-background-clip: text;
+    background-position: -750px 0;
+    animation: backcolor 5s linear infinite alternate;
+  }
+  @keyframes backcolor
+  {
+    100%
+    {
+        background-position: 0 0;
+    }
+  }
+  .text2
+  {
+    margin-left: 40px;
+    font-size: 80px;
+    -webkit-text-stroke: 1px #0e0d0d;
+    color: transparent;
+    background-image: linear-gradient(#0e0d0d,#0e0d0d);
+    background-repeat: no-repeat;
+    -webkit-background-clip: text;
+    background-position: -750px 0;
+    animation: backcolor 5s linear infinite alternate;
+  }
 
-}
 
-.button-18 {
-  align-items: center;
-  background-color: #0A66C2;
-  border: 0;
-  border-radius: 100px;
+.button-1 {
+  background-color: rgb(245, 77, 77);
+  border-radius: 8px;
+  border-style: none;
   box-sizing: border-box;
-  color: #ffffff;
+  color: #FFFFFF;
   cursor: pointer;
-  display: inline-flex;
-  font-family: -apple-system, system-ui, system-ui, "Segoe UI", Roboto, "Helvetica Neue", "Fira Sans", Ubuntu, Oxygen, "Oxygen Sans", Cantarell, "Droid Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Lucida Grande", Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  font-weight: 600;
-  justify-content: center;
+  display: inline-block;
+  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  height: 40px;
   line-height: 20px;
-  max-width: 480px;
-  min-height: 40px;
-  min-width: 0px;
-  overflow: hidden;
-  padding: 0px;
-  padding-left: 20px;
-  padding-right: 20px;
+  list-style: none;
+  margin: 0;
+  outline: none;
+  padding: 10px 16px;
+  position: relative;
   text-align: center;
-  touch-action: manipulation;
-  transition: background-color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, box-shadow 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+  text-decoration: none;
+  transition: color 100ms;
+  vertical-align: baseline;
   user-select: none;
   -webkit-user-select: none;
-  vertical-align: middle;
-  margin-left: 600px;
-  margin-top: 200px;
+  touch-action: manipulation;
+  margin-left: 180px;
+  margin-top: 150px;
 }
 
-.button-18:hover,
-.button-18:focus { 
-  background-color: #16437E;
-  color: #ffffff;
+.button-1:hover,
+.button-1:focus {
+  background-color: #F082AC;
 }
 
-.button-18:active {
-  background: #09223b;
-  color: rgb(255, 255, 255, .7);
+.dot1{
+    height: 100px;
+    width: 100px;
+    background-color:rgb(135, 135, 241);
+    border-radius: 50%;
+    display: inline-block;
+    margin-top: 50px;
+    margin-left: 550px;
+  }
+.dot2
+{
+    height: 25px;
+    width: 25px;
+    background-color:rgb(135, 135, 241);
+    border-radius: 50%;
+    display: inline-block;
+    margin-top: 10px;
+    margin-left: 10px;
 }
 
-.button-18:disabled { 
-  cursor: not-allowed;
-  background: rgba(0, 0, 0, .08);
-  color: rgba(0, 0, 0, .3);
-}
+  
+
+
